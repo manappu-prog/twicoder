@@ -25,5 +25,5 @@ module.exports.create = async(req,res) => {
     
 }
 module.exports.createSession = (req,res) => {
-    return res.send('<h1>create the session</h1>');
+    return res.redirect('/');
 }
