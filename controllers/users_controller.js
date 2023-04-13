@@ -33,3 +33,11 @@ module.exports.create = async(req,res) => {
 module.exports.createSession = (req,res) => {
     return res.redirect('/');
 }
+module.exports.destroySession = (req,res,next) => {
+    req.logout((err) => {
+        if(err){
+            return next(err);
+        }
+        res.redirect('/users/signin');
+    })
+}

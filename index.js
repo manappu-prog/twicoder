@@ -12,7 +12,7 @@ const port = 8080;
 app.set('view engine','ejs');
 app.set('views','views');
 
-app.use(express.static('assets'));
+app.use(express.static('./assets'));
 app.use(expressLayouts);
 
 app.use(express.urlencoded());
